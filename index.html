@@ -166,6 +166,33 @@
 
         }
         
+        fetch("https://paullabworkspace.notion.site/api/v3/loadCachedPageChunk", {
+          "headers": {
+            "accept": "*/*",
+            "accept-language": "ko-KR,ko;q=0.9",
+            "baggage": "sentry-environment=production,sentry-release=23.10.26.72,sentry-public_key=704fe3b1898d4ccda1d05fe1ee79a1f7,sentry-trace_id=a4dd95dab7354b57bd4195dc578b5553,sentry-sample_rate=0",
+            "content-type": "application/json",
+            "notion-audit-log-platform": "web",
+            "notion-client-version": "23.10.26.72",
+            "sec-ch-ua": "\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\"",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-origin",
+            "sentry-trace": "a4dd95dab7354b57bd4195dc578b5553-a69f287c79cc6d88-0",
+            "x-notion-active-user-header": ""
+          },
+          "referrer": "https://paullabworkspace.notion.site/bfb8ca9fb7a34dbf8f69007f064bf669",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "body": "{\"page\":{\"id\":\"bfb8ca9f-b7a3-4dbf-8f69-007f064bf669\"},\"limit\":30,\"cursor\":{\"stack\":[]},\"chunkNumber\":0,\"verticalColumns\":false}",
+          "method": "POST",
+          "mode": "cors",
+          "credentials": "include"
+        }).then(r => console.log(r)).catch(err => console.log(err));
+        
+        fetch("https://paullabworkspace.notion.site/api/v3/loadCachedPageChunk").then(r => console.log(r)).catch(err => console.log(err));
+        
     </script>
 
 </body>
